@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <section class="section1">
+        <div class="mail">
+            <img class="photodeprofil"
+                src="https://avatars.dicebear.com/api/avataaars/<%-JSON.parse(data).user.email%>.svg"
+                alt="Photo de Profil">
+            <a class="email"><%-JSON.parse(data).user.email%></a>
+            <div class="status"></div>
+            <p class="created"><%-JSON.parse(data).user.createdAt.replace(/T/, " ").replace(/\..+/, "")%></p>
+            <div class="hr"></div>
+        </div>
+        <div id="content">
+
+            <div class="channels">
+                <div class="server" name="server" id="Discord">
+                    <img class="logo" src="./images/discord.png" alt="Logo Server">
+                    <p class="nomdeserv">Number For Discord</p>
+                    <p class="prixdunum">0.65 EUR</p>
+                </div>
+                <div class="server" name="server" id="Steam">
+                    <img class="logo" src="./images/steam.png" alt="Logo Server">
+                    <p class="nomdeserv">Number For Steam</p>
+                    <p class="prixdunum">0.85 EUR</p>
+                </div>
+                <div class="server" name="server" id="Aliexpress">
+                    <img class="logo" src="./images/Aliexpress.png" alt="Logo Server">
+                    <p class="nomdeserv">Number For Aliexpress</p>
+                    <p class="prixdunum">0.65 EUR</p>
+                </div>
+                <div class="server" name="server" id="Uber">
+                    <img class="logo" src="./images/uber.png" alt="Logo Server">
+                    <p class="nomdeserv">Number For Uber</p>
+                    <p class="prixdunum">0.85 EUR</p>
+                </div>
+                <div class="server" name="server" id="Apple">
+                    <img class="logo" src="./images/apple.png" alt="Logo Server">
+                    <p class="nomdeserv">Number For Apple</p>
+                    <p class="prixdunum">0.85 EUR</p>
+                </div>
+                <div class="server" name="server" id="Snapchat">
+                    <img class="logo" src="./images/Snapchat.png" alt="Logo Server">
+                    <p class="nomdeserv">Number For Snapchat</p>
+                    <p class="prixdunum">0.85 EUR</p>
+                </div>
+                <div class="server" name="server" id="Tinder">
+                    <img class="logo" src="./images/tinder.png" alt="Logo Server">
+                    <p class="nomdeserv">Number For Tinder</p>
+                    <p class="prixdunum">0.65 EUR</p>
+                </div>
+            </div>
+    </section>
+
+    <section class="section2" id="section2">
+        <h3 class="history">SMS History</h3>
+    </section>
+
+    <section class="section3" id="logs">
+    </section>
+</body>
+<script>const data = <%-data%></script>
+<script src="./js/@me.js"></script>
+<script>document.getElementById('section2').scrollTop = document.getElementById('section2').scrollHeight</script>
+
+</html>
