@@ -8,7 +8,7 @@ router.route('/register').get((req, res) => res.render('register'))
 
 router.route('/@me').get((req, res) => {
     if(!req.query.tkn) return res.redirect('/login')
-    request.get('http://localhost:3000/@me', {
+    request.get('https://sms-receive-online-api.herokuapp.com/@me', {
         headers: {
             'token': req.query.tkn
         }

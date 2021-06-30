@@ -4,7 +4,7 @@ const discord = document.getElementById('Discord'),
 
 discord.addEventListener('click', function (e) {
     e.preventDefault()
-    var request = new Request('http://localhost:3000/sms/payment', {
+    var request = new Request('https://sms-receive-online-api.herokuapp.com/sms/payment', {
         method: 'POST',
         body: JSON.stringify({
             'service': String(document.getElementById('Discord').id),
@@ -23,7 +23,7 @@ discord.addEventListener('click', function (e) {
 
 document.getElementById('Steam').addEventListener('click', function (e) {
     e.preventDefault()
-    var request = new Request('http://localhost:3000/sms/payment', {
+    var request = new Request('https://sms-receive-online-api.herokuapp.com/sms/payment', {
         method: 'POST',
         body: JSON.stringify({
             'service': 'Steam'
@@ -40,7 +40,7 @@ document.getElementById('Steam').addEventListener('click', function (e) {
 
 document.getElementById('Uber').addEventListener('click', function (e) {
     e.preventDefault()
-    var request = new Request('http://localhost:3000/sms/payment', {
+    var request = new Request('https://sms-receive-online-api.herokuapp.com/sms/payment', {
         method: 'POST',
         body: JSON.stringify({
             'service': 'Uber'
@@ -58,7 +58,7 @@ document.getElementById('Uber').addEventListener('click', function (e) {
 
 document.getElementById('Tinder').addEventListener('click', function (e) {
     e.preventDefault()
-    var request = new Request('http://localhost:3000/sms/payment', {
+    var request = new Request('https://sms-receive-online-api.herokuapp.com/sms/payment', {
         method: 'POST',
         body: JSON.stringify({
             'service': 'Tinder'
@@ -75,7 +75,7 @@ document.getElementById('Tinder').addEventListener('click', function (e) {
 
 document.getElementById('Apple').addEventListener('click', function (e) {
     e.preventDefault()
-    var request = new Request('http://localhost:3000/sms/payment', {
+    var request = new Request('https://sms-receive-online-api.herokuapp.com/sms/payment', {
         method: 'POST',
         body: JSON.stringify({
             'service': 'Apple'
@@ -92,7 +92,7 @@ document.getElementById('Apple').addEventListener('click', function (e) {
 
 document.getElementById('Snapchat').addEventListener('click', function (e) {
     e.preventDefault()
-    var request = new Request('http://localhost:3000/sms/payment', {
+    var request = new Request('https://sms-receive-online-api.herokuapp.com/sms/payment', {
         method: 'POST',
         body: JSON.stringify({
             'service': 'Snapchat'
@@ -109,7 +109,7 @@ document.getElementById('Snapchat').addEventListener('click', function (e) {
 
 document.getElementById('Aliexpress').addEventListener('click', function (e) {
     e.preventDefault()
-    var request = new Request('http://localhost:3000/sms/payment', {
+    var request = new Request('https://sms-receive-online-api.herokuapp.com/sms/payment', {
         method: 'POST',
         body: JSON.stringify({
             'service': 'Aliexpress'
@@ -203,7 +203,7 @@ if (JSON.parse(JSON.stringify(data)).user.phone.length !== 0) {
     const phone = JSON.parse(JSON.stringify(data)).user.phone
 
     phone.forEach(a => {
-        request = new Request('http://localhost:3000/sms/' + a.tzid, {
+        request = new Request('https://sms-receive-online-api.herokuapp.com/sms/' + a.tzid, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

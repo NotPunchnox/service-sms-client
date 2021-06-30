@@ -191,7 +191,7 @@
 
 <script>
     if (localStorage.getItem('token')) {
-        request = new Request('http://localhost:3000/@me', {
+        request = new Request('https://sms-receive-online-api.herokuapp.com/@me', {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -207,7 +207,7 @@
     }
     document.getElementById('send').addEventListener('click', (e) => {
         var message = document.getElementById('message'),
-            request = new Request('http://localhost:3000/auth/register', {
+            request = new Request('https://sms-receive-online-api.herokuapp.com/auth/register', {
                 method: 'POST',
                 body: JSON.stringify({
                     'email': String(document.getElementById('email').value),
